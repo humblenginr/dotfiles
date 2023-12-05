@@ -7,13 +7,7 @@ if [ "$TERM_PROGRAM" != tmux ]; then
   fi 
 fi
 
-gcp () {
-  git add . &&
-  git commit -m "$1" &&
-  git push origin main
-}
+alias crepo='$HOME/dotfiles/repo.sh' 
 
-# lvim
-alias lv='lvim'
-export EDITOR="lvim"
+export EDITOR="nvim"
 
