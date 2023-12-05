@@ -1,8 +1,10 @@
-Default configuration folder: $HOME/.config
+# Dotfiles 
 
-> ***NOTE: this dotfiles folder should always be cloned at $HOME/ ***
+#### Default configuration folder: `$HOME/.config`
 
-# repo.sh
+#### Default clone path: `$HOME/dotfiles`
+
+## repo.sh
 A convinience script used to automatically create github repository from the command line.
 
 ### Requirements
@@ -22,11 +24,11 @@ repo.sh
 - Add support for opening the repo on browser after creation
 - Proper error handling 
 
-# tmux.conf
+## tmux.conf
 Tmux configuration file.
 
-# hammerspoon.lua
+## hammerspoon.lua
 hammerspoon configuration file
 
-# .zshrc
+## .zshrc
 
