@@ -27,6 +27,9 @@ repo.sh
 ## tmux.conf
 Tmux configuration file.
 
+### Requirements 
+1. Install [TPM](https://github.com/tmux-plugins/tpm)
+
 ## hammerspoon.lua
 hammerspoon configuration file
 
