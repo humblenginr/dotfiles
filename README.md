@@ -30,5 +30,8 @@ Tmux configuration file.
 ## hammerspoon.lua
 hammerspoon configuration file
 
+### Requirements 
+1. Install [AppLauncher](https://www.hammerspoon.org/Spoons/AppLauncher.html)
+
 ## .zshrc
 
