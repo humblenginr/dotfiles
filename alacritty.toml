@@ -1,0 +1,18 @@
+[window]
+
+opacity = 1
+padding.x = 5
+padding.y = 5
+
+[font]
+
+normal.family = "DankMonoNerdFont"
+bold.family = "DankMonoNerdFont"
+bold.style = "Bold"
+size = 10.0
+
+[terminal]
+
+[terminal.shell]
+
+program = "/usr/bin/fish"
