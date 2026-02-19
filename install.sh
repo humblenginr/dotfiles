@@ -52,6 +52,7 @@ echo "Tmux plugins installed."
 echo "Installing Claude Code..."
 if ! command -v claude &> /dev/null; then
     curl -fsSL https://claude.ai/install.sh | bash
+    sudo ln -sf "$HOME/.local/bin/claude" /usr/local/bin/claude
     echo "Claude Code installed."
 else
     echo "Claude Code already installed, skipping."
