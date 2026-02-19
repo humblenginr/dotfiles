@@ -77,16 +77,6 @@ else
     fi
 fi
 
-# --- Node.js ---
-echo "Installing Node.js..."
-if ! command -v node &> /dev/null; then
-    curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-    sudo apt-get install -y nodejs
-    echo "Node.js installed."
-else
-    echo "Node.js already installed, skipping."
-fi
-
 # --- Claude Code ---
 echo "Installing Claude Code..."
 if ! command -v claude &> /dev/null; then
@@ -113,6 +103,5 @@ echo "========================================"
 echo "  nvim    -> $(nvim --version 2>/dev/null | head -1 || echo 'not found')"
 echo "  tmux    -> $(tmux -V 2>/dev/null || echo 'not found')"
 echo "  fish    -> $(fish --version 2>/dev/null || echo 'not found')"
-echo "  node    -> $(node --version 2>/dev/null || echo 'not found')"
 echo "  claude  -> $(claude --version 2>/dev/null || echo 'not found')"
 echo "========================================"
