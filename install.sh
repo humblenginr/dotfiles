@@ -19,10 +19,7 @@ else
     echo "Neovim already installed, skipping."
 fi
 
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-if ! grep -q "nvim-linux-x86_64" ~/.bashrc 2>/dev/null; then
-    echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.bashrc
-fi
+sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
 
 mkdir -p ~/.config
 ln -sfn "$DOTFILES/nvim" ~/.config/nvim
