@@ -90,7 +90,7 @@ fi
 # --- Claude Code ---
 echo "Installing Claude Code..."
 if ! command -v claude &> /dev/null; then
-    npm install -g @anthropic-ai/claude-code
+    curl -fsSL https://claude.ai/install.sh | bash
     echo "Claude Code installed."
 else
     echo "Claude Code already installed, skipping."
