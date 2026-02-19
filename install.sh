@@ -10,16 +10,16 @@ echo "========================================"
 # --- Neovim ---
 echo "Installing neovim..."
 if ! command -v nvim &> /dev/null; then
-    NVIM_URL=$(curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
-        | grep -o '"browser_download_url": *"[^"]*nvim.appimage"' \
-        | grep -o 'https://[^"]*')
-    curl -Lo /tmp/nvim.appimage "$NVIM_URL"
-    chmod +x /tmp/nvim.appimage
-    sudo mv /tmp/nvim.appimage /usr/local/bin/nvim
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+    sudo rm -rf /opt/nvim-linux-x86_64
+    sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+    rm nvim-linux-x86_64.tar.gz
     echo "Neovim installed."
 else
     echo "Neovim already installed, skipping."
 fi
+
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 mkdir -p ~/.config
 ln -sfn "$DOTFILES/nvim" ~/.config/nvim
