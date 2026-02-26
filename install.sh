@@ -45,8 +45,13 @@ fi
 ln -sf "$DOTFILES/.tmux.conf" ~/.tmux.conf
 echo "Tmux config symlinked."
 
-~/.tmux/plugins/tpm/bin/install_plugins
+TMUX_PLUGIN_MANAGER_PATH="$HOME/.tmux/plugins/" ~/.tmux/plugins/tpm/bin/install_plugins
 echo "Tmux plugins installed."
+
+# --- Alacritty ---
+mkdir -p ~/.config/alacritty
+ln -sf "$DOTFILES/alacritty.toml" ~/.config/alacritty/alacritty.toml
+echo "Alacritty config symlinked."
 
 # --- Claude Code ---
 echo "Installing Claude Code..."
