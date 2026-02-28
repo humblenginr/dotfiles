@@ -45,6 +45,8 @@ fi
 ln -sf "$DOTFILES/.tmux.conf" ~/.tmux.conf
 echo "Tmux config symlinked."
 
+tmux start-server
+tmux source-file ~/.tmux.conf 2>/dev/null || true
 TMUX_PLUGIN_MANAGER_PATH="$HOME/.tmux/plugins/" ~/.tmux/plugins/tpm/bin/install_plugins
 echo "Tmux plugins installed."
 
